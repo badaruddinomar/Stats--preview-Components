@@ -1,0 +1,124 @@
+:root {
+  --Very-dark-blue: hsl(233, 47%, 7%);
+  --dark-desaturated-blue: hsl(244, 38%, 16%);
+  --Soft-violet: hsl(277, 64%, 61%);
+
+  --White: hsl(0, 0%, 100%);
+  --Slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    font-family: "Inter", sans-serif;
+  font-family: "Lexend Deca", sans-serif;
+}
+ul {
+  list-style: none;
+}
+p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* main section start from here */
+
+.section-card {
+  height: 100vh;
+  background: var(--Very-dark-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.parent {
+  background: var(--dark-desaturated-blue);
+  color: white;
+  border-radius: 10px;
+}
+.left-side{
+    padding: 1rem  3rem;
+}
+.insights{
+    color: var(--Soft-violet);
+}
+.left-side h1{
+    font-family: "Lexend Deca", sans-serif;
+
+}
+.left-side p{
+    color: var(--Slightly-transparent-white);
+    margin-top: 1rem;
+    line-height: 1.6;
+}
+.left-ul{
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+}
+.left-side ul li{
+    font-size: 1.5rem;
+    margin-right: auto;
+    margin-top: 1rem;
+    font-weight: bold;
+    font-family: "Inter", sans-serif;
+}
+.left-side ul li span{
+    color: var(--Slightly-transparent-white);
+    font-size: 1rem;
+}
+
+/* right-side start from here */
+
+.right-side{
+   background-image:linear-gradient(to right, hsla(277, 64%, 61%, 0.722),hsla(277, 64%, 61%, 0.522)),url(./images/image-header-desktop.jpg);
+   /* background-position: center; */
+   /* background-size: cover; */
+   height: 60vh;
+   /* object-fit: cover; */
+   border-radius: 0px 10px 10px 0px;
+}
+
+@media(max-width:768px){
+    
+    .section-card{
+        padding: 3rem 1.5rem;
+    }
+    .left-side{
+        order: 2;
+        padding: 2rem auto;
+    }
+    .left-side h1{
+        text-align: center;
+    }
+    .left-side p{
+        text-align: center;
+    }
+    .left-side ul{
+        text-align: center;
+        display: block;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .right-side{
+        order: 1;
+        height: 30vh;
+        border-radius: 10px 10px 0 0 ;
+    }
+}
+.card-footer{
+    color: var(--Slightly-transparent-white);
+    background-color: var(--dark-desaturated-blue);
+    padding: 1rem 0;
+    text-align: center;
+}
+.card-footer .attribution{
+    font-size: 1rem;
+}
+
+.attribution a{ 
+    color: hsl(228, 45%, 44%);
+ }
